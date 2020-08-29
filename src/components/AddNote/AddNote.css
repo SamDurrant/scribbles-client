@@ -1,0 +1,34 @@
+.AddNote {
+  padding-top: 2rem;
+}
+
+.AddNote form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AddNote label {
+  margin-top: 1rem;
+}
+
+.AddNote .error-msg {
+  color: var(--color-surface);
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 15rem;
+}
+
+.SelectInput {
+  width: 10rem;
+  display: block;
+  border: 2px solid var(--color-secondary);
+  background-color: #eee;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}

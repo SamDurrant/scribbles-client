@@ -1,0 +1,67 @@
+.Sidebar {
+  /* width: 40%; */
+  min-width: fit-content;
+  max-width: 35rem;
+  padding: 2rem 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-lt);
+  font-weight: 500;
+  overflow: scroll;
+}
+
+.Main {
+  position: relative;
+  width: inherit;
+  max-width: 65rem;
+  padding: 0 2rem 2rem 2rem;
+  border-right: 10px solid var(--color-primary);
+}
+
+.Main--grid {
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.Button {
+  border: 2px solid var(--color-secondary);
+  background-color: transparent;
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-surface);
+  color: var(--color-text-lt);
+}
+
+.Button--light {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.Button--light:hover {
+  color: var(--color-text-lt);
+}
+
+.BasicInput {
+  width: 10rem;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--color-secondary);
+  background-color: #eee;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}

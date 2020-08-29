@@ -1,0 +1,17 @@
+.Nav {
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.Nav h1 {
+  font-size: 1.5rem;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: var(--color-text-lt);
+}

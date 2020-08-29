@@ -1,0 +1,58 @@
+.note-tile {
+  background-color: var(--color-white);
+  color: var(--color-surface);
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.note-tile:first-child {
+  flex: 2;
+}
+
+.note-tile:last-child {
+  flex: 1;
+}
+
+.note-tile:first-of-type {
+  margin-top: 0;
+}
+
+.note-tile:last-of-type {
+  margin-bottom: 0;
+}
+
+.note-tile-date {
+  margin: 0.5rem 0 0.5rem;
+}
+
+.note-tile a {
+  color: var(--color-surface);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.note-tile a:hover {
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.btn-box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  background-color: var(--color-surface);
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0 1rem;
+}
