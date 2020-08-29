@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './AddNote.css'
 import { validateName, validateContent } from '../Utilities/Validator'
-import { postNote } from '../Utilities/api'
+import notesApiService from '../../services/notes-api-service'
 import ScribblesContext from '../../contexts/ScribblesContext'
 import { ButtonBordered, BasicInput } from '../Utilities/Utilities'
 import { NavLink } from 'react-router-dom'
@@ -59,11 +59,11 @@ export class AddNote extends Component {
     const newNote = {
       name: this.state.name.value,
       content: this.state.content.value,
-      modified: new Date().toISOString(),
-      folderId: folderId,
+      folder_id: folderId,
     }
 
-    postNote(newNote, folderId)
+    notesApiService
+      .postNote(newNote)
       .then((data) => {
         // clear input value
         this.setState({
@@ -83,17 +83,8 @@ export class AddNote extends Component {
         // redirect the user to home page
         this.props.history.push('/')
 
-        // fix name
-        const fixedNote = {
-          id: data.id,
-          name: newNote.name,
-          content: newNote.content,
-          modified: newNote.modified,
-          folderId: newNote.folderId,
-        }
-
         // push to context
-        this.context.addNote(fixedNote)
+        this.context.addNote(data)
       })
       .catch((error) => {
         // set error message which will be displayed for user

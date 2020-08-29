@@ -57,6 +57,7 @@ MainBody.propTypes = {
         folder_id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired,
+        date_created: PropTypes.string.isRequired,
       }).isRequired
     ),
   }),

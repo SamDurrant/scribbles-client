@@ -53,7 +53,6 @@ export class ScribblesProvider extends Component {
   }
 
   findNote = (noteId) => {
-    console.log(this.state.notes.find((note) => note.id === noteId))
     return this.state.notes.find((note) => note.id === noteId)
   }
 
