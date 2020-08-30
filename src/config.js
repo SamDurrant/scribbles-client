@@ -1,5 +1,3 @@
 export default {
   API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT,
-  API_BEARER_TOKEN: process.env.REACT_APP_API_BEARER_TOKEN,
-  MOCKAROO_API: process.env.REACT_APP_MOCKAROO_API,
 }
