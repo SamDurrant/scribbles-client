@@ -7,10 +7,17 @@
   width: 100%;
   max-width: 75rem;
   display: flex;
+  flex-direction: column;
   height: calc(100vh - 4rem);
   overflow: hidden;
 }
 
 .Main {
   overflow: scroll;
+}
+
+@media only screen and (min-width: 900px) {
+  .App-content {
+    flex-direction: row;
+  }
 }

@@ -21,10 +21,12 @@ export class MainSidebar extends Component {
 
     return (
       <div className="MainSidebar">
-        <NavLink to="/add-folder">
-          <ButtonBordered>add folder</ButtonBordered>
-        </NavLink>
-        {this.renderNavTiles(folders)}
+        <div className="sidebar-button">
+          <NavLink to="/add-folder">
+            <ButtonBordered>add folder</ButtonBordered>
+          </NavLink>
+        </div>
+        <div className="sidebar-tiles">{this.renderNavTiles(folders)}</div>
       </div>
     )
   }

@@ -1,12 +1,7 @@
 .Sidebar {
-  /* width: 40%; */
-  min-width: fit-content;
-  max-width: 35rem;
-  padding: 2rem 0.5rem;
   background-color: var(--color-primary);
   color: var(--color-text-lt);
   font-weight: 500;
-  overflow: scroll;
 }
 
 .Main {
@@ -14,7 +9,6 @@
   width: inherit;
   max-width: 65rem;
   padding: 0 2rem 2rem 2rem;
-  border-right: 10px solid var(--color-primary);
 }
 
 .Main--grid {
@@ -25,11 +19,11 @@
 }
 
 .Button {
-  border: 2px solid var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   background-color: transparent;
   font-family: var(--main-font);
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
   margin: 1rem;
   font-weight: 500;
   color: var(--color-secondary);
@@ -64,4 +58,25 @@
   margin: 1rem;
   font-weight: 500;
   color: var(--color-secondary);
+}
+
+@media only screen and (min-width: 900px) {
+  .Sidebar {
+    padding: 2rem 0.5rem;
+    min-width: fit-content;
+    min-width: 13rem;
+    max-width: 30rem;
+    overflow: scroll;
+  }
+
+  .Button {
+    border: 2px solid var(--color-secondary);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+  }
+
+  .Main {
+    border-right: 10px solid var(--color-primary);
+  }
 }

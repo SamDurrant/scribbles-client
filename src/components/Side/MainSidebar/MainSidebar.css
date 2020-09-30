@@ -1,11 +1,22 @@
 .MainSidebar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  width: 100vw;
+  place-items: center;
+  padding-right: 1rem;
+}
+
+.sidebar-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  overflow: scroll;
+  width: 100%;
+  margin: 0 1rem;
 }
 
 .nav-tile {
-  padding: 1rem 0.5rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   color: var(--color-white);
   background-color: var(--color-secondary);
@@ -14,4 +25,25 @@
 .nav-tile.active {
   font-weight: 700;
   background-color: var(--color-surface);
+}
+
+@media only screen and (min-width: 900px) {
+  .MainSidebar {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 300px;
+    padding: 1rem 0.5rem;
+  }
+
+  .sidebar-tiles {
+    grid-template-columns: 1fr;
+    overflow: scroll;
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .nav-tile {
+    margin: 0.5rem 0;
+  }
 }

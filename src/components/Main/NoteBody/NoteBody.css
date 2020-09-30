@@ -1,4 +1,5 @@
 .note-tile-full {
+  max-width: 37.5rem;
   background-color: var(--color-white);
   color: var(--color-surface);
   margin: 1rem auto;
@@ -16,4 +17,9 @@
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
+}
+
+.NoteBody p {
+  max-width: 37.5rem;
+  margin: 2rem auto;
 }
